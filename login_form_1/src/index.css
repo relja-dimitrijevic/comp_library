@@ -2,7 +2,7 @@
   font-family: Helvetica, sans-serif;
   line-height: 2.5vw;
   font-weight: 400;
-  
+
 
   color-scheme: light;
   color: white;
@@ -13,14 +13,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url("images/bg-index.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
+
 }
 
-html{
+html {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -30,5 +26,9 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  backdrop-filter: brightness(80%);
+  background-image: url("images/bg-index.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }

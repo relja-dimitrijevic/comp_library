@@ -5,7 +5,6 @@ function Login() {
         <div className='login-wrapper'>
             <div className='login-form'>
                 <h2 className='header'>Login Form</h2>
-
                 <div className='input-section'>
                     <input type='email' className='email'></input>
                     <input type='password' className='password'></input>
@@ -17,12 +16,12 @@ function Login() {
                         <a href='' className='forgot'>Forgot password?</a>
                     </div>
                 </div>
-
-                <button className='login-button'>Log In!</button>
-
-                <div className='signup-section'>
-                    <p className='signup'> Don't have an account? </p>
-                    <a href='' className='signup'> Sign up now! </a>
+                <div className='login-btn-wrapper'>
+                    <button className='login-button'>Log In!</button>
+                    <div className='signup-section'>
+                        <p className='signup'> Don't have an account? </p>
+                        <a href='' className='signup'> Sign up now! </a>
+                    </div>
                 </div>
             </div>
         </div>
