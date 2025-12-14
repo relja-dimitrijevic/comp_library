@@ -1,0 +1,56 @@
+/* === Soft UI FAQ – modern morphing style === */
+.variant-morph .faq-wrapper {
+    width: 50%;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+}
+
+.variant-morph .accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.variant-morph .faq-item.open .accordion {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+.circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_icon {
+    transition: all 0.3s ease;
+}
+
+.faq-item.open .circle_icon {
+    transform: rotate(180deg) translateY(-1px);
+}
+
+.answer-block {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item.open .answer-block {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}

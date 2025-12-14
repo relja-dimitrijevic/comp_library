@@ -1,0 +1,56 @@
+.image-layout-container.masonry {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.masonry-grid {
+  columns: 3;
+  gap: 1rem;
+}
+
+.masonry-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  filter: grayscale(0.5);
+  transition: filter 0.3s ease;
+}
+
+.masonry-item:hover img {
+  filter: grayscale(0);
+}
+
+.masonry-item:hover {
+  transform: translateY(-5px);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.masonry-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .masonry-grid {
+    columns: 2 150px;
+  }
+}
