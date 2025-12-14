@@ -1,10 +1,10 @@
-import './Login.css';
+import './Signup.css';
 
-function Login() {
+function Signup() {
     return (
         <div className='login-wrapper'>
             <div className='login-form'>
-                <h2 className='header'>Login Form</h2>
+                <h2 className='header'>Sign Up</h2>
 
                 <div className='input-section'>
                     <div className='email-input'>
@@ -23,29 +23,27 @@ function Login() {
                             type='password'
                             id='password'
                             className='password'
-                            placeholder='Enter your password'
+                            placeholder='Create a password'
                         />
                     </div>
 
-                    <div className='pass-options'>
-                        <div className='remember-me'>
-                            <input
-                                type='checkbox'
-                                className='remember-checkbox'
-                            />
-                            <p className='remember-text'>Remember me!</p>
-                        </div>
-
-                        <a href='' className='forgot'>Forgot password?</a>
+                    <div className='password-input'>
+                        <label>Confirm Password:</label>
+                        <input
+                            type='password'
+                            id='confirm-password'
+                            className='password'
+                            placeholder='Confirm your password'
+                        />
                     </div>
                 </div>
 
                 <div className='login-btn-wrapper'>
-                    <button className='login-button'>Log In!</button>
+                    <button className='login-button'>Create Account</button>
 
                     <div className='signup-section'>
-                        <p className='signup'>Don&apos;t have an account?</p>
-                        <a href='' className='signup'>Sign up now!</a>
+                        <p className='signup'>Already have an account?</p>
+                        <a href='' className='signup'>Log in</a>
                     </div>
                 </div>
             </div>
@@ -53,4 +51,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Signup;

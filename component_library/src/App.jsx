@@ -1,4 +1,5 @@
 import Login from './components/Login.jsx'
+import Signup from './components/Signup.jsx'
 import ImageLayout from './components/ImageLayout.jsx'
 import ImageLayout_2 from './components/ImageLayout_2.jsx'
 import ImageLayout_3 from './components/ImageLayout_3.jsx'
@@ -11,7 +12,9 @@ import './App.css'
 function App() {
 
   return (
-    <ImageLayout_2></ImageLayout_2>
+    <div className='section'>
+      <Login></Login>
+    </div>
   )
 }
 

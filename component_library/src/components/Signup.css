@@ -34,7 +34,8 @@
 .input-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
     width: 100%;
     padding: 0 2em;
@@ -57,7 +58,7 @@ input::placeholder {
 .email-input,
 .password-input {
     width: 100%;
-    margin-top: 2em;
+    margin-top: 0em;
     display: flex;
     flex-direction: column;
 }
@@ -165,7 +166,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .signup-section {
