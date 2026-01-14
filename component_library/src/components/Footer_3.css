@@ -1,0 +1,135 @@
+.footer-v3 {
+    width: 100%;
+    padding: 3rem 2rem 1.5rem 2rem;
+    border-top: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    
+}
+
+.footer-container-v3 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-main-v3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links-v3 {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer-link-v3 {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-link-v3:hover {
+    color: var(--accent-color);
+}
+
+.footer-newsletter-v3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter-title-v3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.newsletter-form-v3 {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-input-v3 {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.newsletter-input-v3::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input-v3:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-button-v3 {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-button-v3:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.footer-bottom-v3 {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom-v3 p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-v3 {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .footer-main-v3 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-links-v3 {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .newsletter-form-v3 {
+        flex-direction: column;
+    }
+
+    .newsletter-button-v3 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-main-v3 {
+        gap: 3rem;
+    }
+}
+

@@ -1,0 +1,37 @@
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+}
+
+.mobile-menu-btn span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobile-menu-btn:hover span {
+  background-color: var(--accent-color);
+}
+
+.mobile-menu-btn:active span,
+.mobile-menu-btn:focus span {
+  background-color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+

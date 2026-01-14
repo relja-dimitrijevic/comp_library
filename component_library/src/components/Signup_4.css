@@ -1,0 +1,134 @@
+.signup-wrapper-v4 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    padding: 2rem 1rem;
+}
+
+.signup-form-v4 {
+    width: 100%;
+    max-width: 420px;
+    padding: 3rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.header-v4 {
+    font-size: 2rem;
+    margin: 0 0 2.5rem 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.input-section-v4 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-wrapper-v4 {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.input-v4 {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-v4:focus {
+    outline: none;
+    border-bottom-color: transparent;
+}
+
+.input-v4:focus + .label-v4,
+.label-v4.focused {
+    transform: translateY(-1.75rem) scale(0.85);
+    color: var(--accent-color);
+}
+
+.label-v4 {
+    position: absolute;
+    left: 0;
+    top: 1.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: left top;
+}
+
+.input-border-v4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.input-border-v4.active {
+    width: 100%;
+}
+
+.signup-button-v4 {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.signup-button-v4:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 245, 255, 0.4);
+}
+
+.login-section-v4 {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-section-v4 a {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .signup-form-v4 {
+        padding: 2.5rem 2rem;
+    }
+
+    .header-v4 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .input-section-v4 {
+        gap: 1.5rem;
+    }
+}
+

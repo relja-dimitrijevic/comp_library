@@ -3,24 +3,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
 }
 
 .masonry-grid {
   columns: 3;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .masonry-item {
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
-  transition: transform 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+.masonry-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
 }
 
 .masonry-item img {
   width: 100%;
   display: block;
-  filter: grayscale(0.5);
+  filter: grayscale(0.7);
   transition: filter 0.3s ease;
 }
 
@@ -28,19 +42,20 @@
   filter: grayscale(0);
 }
 
-.masonry-item:hover {
-  transform: translateY(-5px);
-}
-
 .overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.overlay p {
+  margin: 0;
+  font-weight: 500;
 }
 
 .masonry-item:hover .overlay {
@@ -49,7 +64,18 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .image-layout-container.masonry {
+    padding: 2rem 1rem;
+  }
+
   .masonry-grid {
-    columns: 2 150px;
+    columns: 1;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .masonry-grid {
+    columns: 2;
   }
 }

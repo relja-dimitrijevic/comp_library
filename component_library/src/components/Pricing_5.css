@@ -1,0 +1,138 @@
+.pricing-container-v5 {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pricing-title-v5 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 3rem 0;
+}
+
+.pricing-table-v5 {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.pricing-row-v5 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2fr 1fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.pricing-row-v5:last-child {
+    border-bottom: none;
+}
+
+.pricing-row-v5:hover {
+    background-color: rgba(0, 245, 255, 0.1);
+}
+
+.plan-info-v5,
+.plan-price-section-v5,
+.plan-features-v5,
+.plan-action-v5 {
+    padding: 1.5rem;
+}
+
+.plan-info-v5 {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plan-name-v5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.plan-price-section-v5 {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.price-amount-v5 {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.price-period-v5 {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+}
+
+.plan-features-v5 {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag-v5 {
+    padding: 0.4rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+}
+
+.plan-button-v5 {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-button-v5:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .pricing-container-v5 {
+        padding: 3rem 1rem;
+    }
+
+    .pricing-title-v5 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .pricing-row-v5 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .plan-info-v5,
+    .plan-price-section-v5,
+    .plan-features-v5,
+    .plan-action-v5 {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+    }
+
+    .plan-action-v5 {
+        border-bottom: none;
+    }
+}

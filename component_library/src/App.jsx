@@ -1,21 +1,42 @@
-import Login from './components/Login.jsx'
-import Signup from './components/Signup.jsx'
-import ImageLayout from './components/ImageLayout.jsx'
-import ImageLayout_2 from './components/ImageLayout_2.jsx'
-import ImageLayout_3 from './components/ImageLayout_3.jsx'
-import FAQ from './components/FAQ.jsx'
-import FAQ_3 from './components/FAQ_3.jsx'
-import FAQ_2 from './components/FAQ_2.jsx'
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Sidebar from './components/showcase/Sidebar';
+import MobileMenu from './components/showcase/MobileMenu';
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import ComponentDetail from './pages/ComponentDetail';
+import './App.css';
 
-import './App.css'
+function AppContent() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
 
-function App() {
+  // Route change detection (no zoom manipulation)
+  useEffect(() => {
+    // Any route-specific logic can go here if needed
+  }, [location.pathname]);
 
   return (
-    <div className='section'>
-      <Login></Login>
+    <div className="app-container">
+      <MobileMenu onToggle={() => setSidebarOpen(!sidebarOpen)} isOpen={sidebarOpen} />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/components/:name/:variant" element={<ComponentDetail />} />
+        </Routes>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+export default App;

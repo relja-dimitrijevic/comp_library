@@ -1,0 +1,147 @@
+.login-wrapper-v3 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    padding: 2rem 1rem;
+}
+
+.login-form-v3 {
+    width: 100%;
+    max-width: 450px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.header-v3 {
+    font-size: 2rem;
+    margin: 0 0 2.5rem 0;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.input-section-v3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-wrapper-v3 {
+    position: relative;
+}
+
+.input-v3 {
+    width: 100%;
+    padding: 1rem 0.75rem 0.5rem 0.75rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-v3:focus {
+    outline: none;
+    border-bottom-color: var(--accent-color);
+}
+
+.input-v3:focus + .label-v3,
+.label-v3.focused {
+    transform: translateY(-1.5rem) scale(0.85);
+    color: var(--accent-color);
+}
+
+.label-v3 {
+    position: absolute;
+    left: 0.75rem;
+    top: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: left top;
+}
+
+.pass-options-v3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: -1rem;
+}
+
+.remember-v3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-v3 {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.forgot-v3 {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.forgot-v3:hover {
+    color: var(--accent-color);
+}
+
+.login-button-v3 {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.login-button-v3:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.signup-section-v3 {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-section-v3 a {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .login-form-v3 {
+        padding: 2rem 1.5rem;
+    }
+
+    .header-v3 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .input-section-v3 {
+        gap: 1.5rem;
+    }
+}
+

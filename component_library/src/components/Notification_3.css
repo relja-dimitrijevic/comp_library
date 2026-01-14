@@ -1,0 +1,73 @@
+.notifications-container-v3 {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.notifications-stack-v3 {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.notification-v3 {
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.notification-v3:hover {
+    transform: translateX(5px);
+}
+
+.notification-bar-v3 {
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.notification-success-v3 .notification-bar-v3 {
+    background-color: var(--accent-color);
+}
+
+.notification-error-v3 .notification-bar-v3 {
+    background-color: #ff4444;
+}
+
+.notification-warning-v3 .notification-bar-v3 {
+    background-color: #ffaa00;
+}
+
+.notification-info-v3 .notification-bar-v3 {
+    background-color: #4488ff;
+}
+
+.notification-message-v3 {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .notifications-container-v3 {
+        padding: 1rem;
+    }
+
+    .notification-v3 {
+        padding: 1rem 1.25rem;
+    }
+}

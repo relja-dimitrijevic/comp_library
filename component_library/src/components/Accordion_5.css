@@ -1,0 +1,115 @@
+.accordion-container-v5 {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-title-v5 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 3rem 0;
+}
+
+.accordion-list-v5 {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.accordion-item-v5 {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.accordion-item-v5:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.accordion-item-v5.open {
+    border-color: var(--accent-color);
+    background-color: rgba(0, 245, 255, 0.1);
+}
+
+.accordion-header-v5 {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-header-v5:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.accordion-item-v5.open .accordion-header-v5 {
+    color: var(--accent-color);
+}
+
+.accordion-toggle-v5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.accordion-item-v5.open .accordion-toggle-v5 {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.accordion-content-v5 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-item-v5.open .accordion-content-v5 {
+    max-height: 500px;
+}
+
+.accordion-content-v5 p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .accordion-container-v5 {
+        padding: 3rem 1rem;
+    }
+
+    .accordion-title-v5 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .accordion-header-v5 {
+        padding: 1rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+

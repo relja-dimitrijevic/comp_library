@@ -1,0 +1,65 @@
+.table-container-v2 {
+    width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.striped-table-v2 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.striped-table-v2 thead {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.striped-table-v2 th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid white;
+}
+
+.striped-table-v2 td {
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.striped-table-v2 tbody tr.even-row {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.striped-table-v2 tbody tr.odd-row {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.striped-table-v2 tbody tr {
+    transition: all 0.3s ease;
+}
+
+.striped-table-v2 tbody tr:hover {
+    background-color: rgba(0, 245, 255, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+    .table-container-v2 {
+        padding: 1rem;
+    }
+
+    .striped-table-v2 {
+        font-size: 0.9rem;
+    }
+
+    .striped-table-v2 th,
+    .striped-table-v2 td {
+        padding: 0.75rem 1rem;
+    }
+}
+

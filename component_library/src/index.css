@@ -10,18 +10,26 @@
 
 #root{
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 html, body {
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  height: auto;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
   max-width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  height: auto;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -31,6 +39,21 @@ input, button, textarea, select {
   font: inherit;
 }
 
+/* Prevent browser zoom on input focus (mobile) */
+input, textarea, select {
+  font-size: 16px !important; /* Prevents iOS zoom on focus */
+}
+
+button {
+  font-size: inherit; /* Buttons should inherit, not force 16px */
+}
+
+/* Ensure consistent rendering */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 button {
   cursor: pointer;
 }
@@ -38,4 +61,18 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+:root {
+  --accent-color: rgb(0, 245, 255);
+  --accent-secondary: rgb(255, 0, 255);
+  --bg-primary: #0a0a0a;
+  --bg-surface: #1a1a1a;
+  --text-primary: #f5f5f5;
+  background-color: var(--bg-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }

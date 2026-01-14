@@ -1,0 +1,126 @@
+.navbar-v5 {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+.navbar-container-v5 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo-v5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.navbar-menu-v5 {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navbar-link-v5 {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-link-v5:hover {
+    color: var(--accent-color);
+}
+
+.navbar-dropdown-v5 {
+    position: relative;
+}
+
+.dropdown-arrow-v5 {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow-v5.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu-v5 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    min-width: 180px;
+    padding: 0.5rem 0;
+    animation: fadeDown 0.3s ease;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item-v5 {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item-v5:hover {
+    background-color: rgba(0, 245, 255, 0.2);
+    color: var(--accent-color);
+    padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-v5 {
+        padding: 1rem;
+    }
+
+    .navbar-menu-v5 {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-menu-v5 {
+        position: static;
+        margin-top: 0.5rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-menu-v5 {
+        gap: 2rem;
+    }
+}
+

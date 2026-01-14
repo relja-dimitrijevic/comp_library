@@ -1,0 +1,117 @@
+.accordion-container-v3 {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-title-v3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 3rem 0;
+}
+
+.accordion-list-v3 {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.accordion-item-v3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.accordion-item-v3:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion-item-v3.open {
+    border-bottom-color: var(--accent-color);
+}
+
+.accordion-header-v3 {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.accordion-header-v3:hover {
+    color: var(--accent-color);
+}
+
+.accordion-title-text-v3 {
+    flex: 1;
+}
+
+.accordion-line-v3 {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.accordion-item-v3.open .accordion-line-v3 {
+    background-color: var(--accent-color);
+}
+
+.accordion-icon-v3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-item-v3.open .accordion-icon-v3 {
+    color: var(--accent-color);
+}
+
+.accordion-content-v3 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-item-v3.open .accordion-content-v3 {
+    max-height: 500px;
+}
+
+.accordion-content-v3 p {
+    padding: 0 0 1.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .accordion-container-v3 {
+        padding: 3rem 1rem;
+    }
+
+    .accordion-title-v3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .accordion-header-v3 {
+        padding: 1.25rem 0;
+        font-size: 1rem;
+    }
+}
+

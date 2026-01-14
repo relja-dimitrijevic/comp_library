@@ -1,22 +1,25 @@
 .login-wrapper {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    --accent-color: rgb(158, 0, 197);
+    color: white;
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .login-form {
     width: 40%;
-    height: 70%;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 2em 2em;
-    border-radius: 0.4rem;
-    box-shadow: 0rem 0rem 12px rgba(168, 168, 168, 0.5);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    max-width: 450px;
+    min-height: 500px;
+    border: 2px solid white;
+    padding: 3rem 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,55 +45,74 @@
 
 .email:focus,
 .password:focus {
-    border: 2px solid var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(0, 245, 255, 0.2);
 }
 
-input::placeholder {
-  color: #aaa;
-}
 
 .header {
     font-size: 2rem;
     margin: 0;
+    color: white;
+    font-weight: bold;
 }
 
 .email-input,
 .password-input {
     width: 100%;
-    margin-top: 2em;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 .email-input{
     margin-top: 0;
 }
 
+.email-input label,
+.password-input label {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
 .email,
 .password {
-    background-color: white;
-    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 1rem;
     line-height: 1.5rem;
-    color: rgb(70, 70, 70);
+    color: white;
     outline: none;
-    padding: 0.5em;
-    border-radius: 0.2rem;
+    padding: 0.75rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.email::placeholder,
+.password::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .login-button {
     padding: 1em 2em;
-    background-color: black;
-    border: none;
-    color: white;
-    transition: all 0.2s ease-in-out;
-    border-radius: 0.2rem;
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    transition: all 0.3s ease;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .login-button:hover {
     background-color: var(--accent-color);
-    border-radius: 0.1rem;
-    box-shadow: 0 0 8px var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 245, 255, 0.4);
 }
 
 .pass-options {
@@ -114,12 +136,12 @@ input::placeholder {
     -webkit-appearance: none;
     width: 1.2em;
     height: 1.2em;
-    border: 2px solid rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 0.3em;
     background: transparent;
     cursor: pointer;
     position: relative;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 /* Checkmark using pseudo-element */
@@ -147,17 +169,19 @@ input::placeholder {
 }
 
 .remember-checkbox:hover {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    border-color: var(--accent-color);
 }
 
 .remember-text {
     font-size: 0.9rem;
     margin: 0;
+    color: white;
 }
 
 .forgot {
     font-size: 0.9em;
     margin: 0;
+    color: white;
 }
 
 .login-btn-wrapper {
@@ -178,6 +202,41 @@ input::placeholder {
 
 .signup {
     margin: 0;
+    color: white;
 }
 
-@media (max-width: 426px) {}
+.signup-section a {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .login-wrapper {
+        padding: 1rem;
+    }
+
+    .login-form {
+        width: 95%;
+        height: auto;
+        min-height: 500px;
+        padding: 2rem 1.5rem;
+    }
+
+    .header {
+        font-size: 1.75rem;
+    }
+
+    .input-section {
+        padding: 0 1em;
+    }
+
+    .login-button {
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-form {
+        width: 50%;
+    }
+}

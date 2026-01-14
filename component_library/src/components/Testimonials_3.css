@@ -1,0 +1,114 @@
+.testimonials-container-v3 {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-title-v3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 3rem 0;
+}
+
+.testimonials-list-v3 {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonial-item-v3 {
+    border-left: 4px solid white;
+    padding-left: 2rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-item-v3:hover {
+    border-left-color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+.testimonial-quote-v3 {
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent-color);
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-family: Georgia, serif;
+}
+
+.testimonial-text-v3 {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: white;
+    margin: 0 0 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.testimonial-author-v3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 2rem;
+}
+
+.author-image-v3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    filter: grayscale(0.5);
+}
+
+.author-details-v3 {
+    flex: 1;
+}
+
+.author-name-v3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 0.25rem 0;
+}
+
+.author-role-v3 {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonials-container-v3 {
+        padding: 3rem 1rem;
+    }
+
+    .testimonials-title-v3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-item-v3 {
+        padding: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .testimonial-quote-v3 {
+        font-size: 3rem;
+        left: 1.5rem;
+    }
+
+    .testimonial-text-v3,
+    .testimonial-author-v3 {
+        padding-left: 1.5rem;
+    }
+}

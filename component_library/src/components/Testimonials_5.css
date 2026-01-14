@@ -1,0 +1,128 @@
+.testimonials-container-v5 {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-title-v5 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 3rem 0;
+}
+
+.testimonials-stack-v5 {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.testimonial-stack-item-v5 {
+    display: flex;
+    gap: 1.5rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.testimonial-stack-item-v5:hover {
+    border-color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+.testimonial-stack-item-v5:nth-child(even) {
+    flex-direction: row-reverse;
+    transform: translateX(-10px);
+}
+
+.testimonial-stack-item-v5:nth-child(even):hover {
+    transform: translateX(-5px);
+}
+
+.stack-image-v5 {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 2px solid white;
+    flex-shrink: 0;
+}
+
+.stack-image-v5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.5);
+    transition: filter 0.3s ease;
+}
+
+.testimonial-stack-item-v5:hover .stack-image-v5 img {
+    filter: grayscale(0);
+}
+
+.stack-content-v5 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stack-text-v5 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin: 0 0 1rem 0;
+    font-style: italic;
+}
+
+.stack-author-v5 {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 0.75rem;
+}
+
+.stack-name-v5 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 0.25rem 0;
+}
+
+.stack-role-v5 {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonials-container-v5 {
+        padding: 3rem 1rem;
+    }
+
+    .testimonials-title-v5 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-stack-item-v5,
+    .testimonial-stack-item-v5:nth-child(even) {
+        flex-direction: column;
+        transform: none;
+    }
+
+    .testimonial-stack-item-v5:hover,
+    .testimonial-stack-item-v5:nth-child(even):hover {
+        transform: translateY(-5px);
+    }
+
+    .stack-image-v5 {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+}
