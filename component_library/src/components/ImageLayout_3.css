@@ -10,17 +10,18 @@
 
 .scroll-wrapper {
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-evenly;
+  gap: 2REM;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
+  padding: 2rem 0;
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 .carousel-card {
-  min-width: 280px;
-  height: 350px;
+  min-width: 180px;
+  height: 220px;
   scroll-snap-align: center;
   overflow: hidden;
   border-radius: 0.8rem;
@@ -64,14 +65,14 @@
   }
 
   .carousel-card {
-    min-width: 150px;
-    height: 200px;
+    min-width: 120px;
+    height: 150px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .carousel-card {
-    min-width: 200px;
-    height: 250px;
+    min-width: 150px;
+    height: 180px;
   }
 }

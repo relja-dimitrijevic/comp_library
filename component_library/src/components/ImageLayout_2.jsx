@@ -6,6 +6,8 @@ function ImageLayout_2() {
     { src: "./images/image_2.jpg", caption: "Image Two" },
     { src: "./images/image_3.jpg", caption: "Image Three" },
     { src: "./images/image_4.jpg", caption: "Image Four" },
+    { src: "./images/image_5.jpg", caption: "Image Five" },
+    { src: "./images/image_6.jpg", caption: "Image Six" },
   ];
 
   return (

@@ -69,12 +69,31 @@ function ComponentDetail() {
     }
   };
 
-  const getComponentCode = () => {
+  const getJsxCode = () => {
     if (loadingCode) {
       return 'Loading code...';
     }
     const variantSuffix = currentVariant === 1 ? '' : `_${currentVariant}`;
-    return `// ${name}${variantSuffix}.jsx\n${jsxCode}\n\n// ${name}${variantSuffix}.css\n${cssCode}`;
+    return jsxCode || `// ${name}${variantSuffix}.jsx\n// Component file not found`;
+  };
+
+  const getCssCode = () => {
+    if (loadingCode) {
+      return 'Loading code...';
+    }
+    const variantSuffix = currentVariant === 1 ? '' : `_${currentVariant}`;
+    return cssCode || `/* ${name}${variantSuffix}.css */\n/* CSS file not found */`;
+  };
+
+  const copyJsxCode = () => {
+    const variantSuffix = currentVariant === 1 ? '' : `_${currentVariant}`;
+    navigator.clipboard.writeText(jsxCode);
+    alert('JSX code copied to clipboard!');
+  };
+
+  const copyCssCode = () => {
+    navigator.clipboard.writeText(cssCode);
+    alert('CSS code copied to clipboard!');
   };
 
   if (!Component) {
@@ -93,7 +112,12 @@ function ComponentDetail() {
       <div className="detail-header">
         <div className="header-info">
           <h1 className="component-title">{name}</h1>
-          <span className="component-variant-badge">Variant {currentVariant}</span>
+          <div className="variant-info">
+            <span className="component-variant-name">
+              {componentInfo?.variantNames?.[currentVariant - 1] || `Variant ${currentVariant}`}
+            </span>
+            <span className="component-variant-badge">Variant {currentVariant}</span>
+          </div>
         </div>
         <Link to="/gallery" className="back-link">← Back to Gallery</Link>
       </div>
@@ -104,8 +128,10 @@ function ComponentDetail() {
             key={v}
             className={`variant-tab ${currentVariant === v ? 'active' : ''}`}
             onClick={() => handleVariantChange(v)}
+            title={componentInfo?.variantNames?.[v - 1] || `Variant ${v}`}
           >
-            Variant {v}
+            <span className="variant-tab-name">{componentInfo?.variantNames?.[v - 1] || `Variant ${v}`}</span>
+            <span className="variant-tab-number">{v}</span>
           </button>
         ))}
       </div>
@@ -142,22 +168,42 @@ function ComponentDetail() {
       </div>
 
       {showCode && (
-        <div className="code-section">
-          <div className="code-header">
-            <span>Component Code</span>
-            <button
-              className="copy-btn"
-              onClick={() => {
-                navigator.clipboard.writeText(getComponentCode());
-                alert('Code copied to clipboard!');
-              }}
-            >
-              Copy
-            </button>
+        <div className="code-sections">
+          <div className="code-section">
+            <div className="code-header">
+              <span className="code-file-name">
+                {name}{currentVariant === 1 ? '' : `_${currentVariant}`}.jsx
+              </span>
+              <button
+                className="copy-btn"
+                onClick={copyJsxCode}
+                disabled={loadingCode || !jsxCode}
+              >
+                Copy JSX
+              </button>
+            </div>
+            <pre className="code-block">
+              <code>{getJsxCode()}</code>
+            </pre>
           </div>
-          <pre className="code-block">
-            <code>{getComponentCode()}</code>
-          </pre>
+
+          <div className="code-section">
+            <div className="code-header">
+              <span className="code-file-name">
+                {name}{currentVariant === 1 ? '' : `_${currentVariant}`}.css
+              </span>
+              <button
+                className="copy-btn"
+                onClick={copyCssCode}
+                disabled={loadingCode || !cssCode}
+              >
+                Copy CSS
+              </button>
+            </div>
+            <pre className="code-block">
+              <code>{getCssCode()}</code>
+            </pre>
+          </div>
         </div>
       )}
     </div>

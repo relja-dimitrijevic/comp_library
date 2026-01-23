@@ -5,6 +5,8 @@
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
     transition: all 0.3s ease;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .card:hover {
@@ -47,8 +49,54 @@
 .card-description {
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0;
+    margin: 0 0 1rem 0;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 255, 255, 0.05));
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(0, 245, 255, 0.2);
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-author,
+.card-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-author svg,
+.card-date svg {
+    opacity: 0.6;
 }
 
 @media (max-width: 768px) {

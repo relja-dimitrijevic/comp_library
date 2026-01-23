@@ -10,14 +10,14 @@
 
 .images-staggered-v5 {
     width: 100%;
-    max-width: 1000px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
 .image-item-v5 {
-    width: 80%;
+    width: 70%;
     transition: transform 0.3s ease;
     animation: fadeInUp 0.6s ease var(--delay, 0s) both;
 }

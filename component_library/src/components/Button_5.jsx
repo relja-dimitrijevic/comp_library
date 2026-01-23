@@ -1,6 +1,6 @@
 import './Button_5.css';
 
-function Button_5({ children, onClick, ...props }) {
+function Button_5({ children = 'Button', onClick, ...props }) {
     return (
         <button className='button-3d' onClick={onClick} {...props}>
             {children}

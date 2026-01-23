@@ -75,11 +75,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+    transform: rotate(0deg) scale(1);
+    color: white;
+    position: relative;
 }
 
 .accordion-item-v3.open .accordion-icon-v3 {
     color: var(--accent-color);
+    transform: rotate(180deg) scale(1.15);
+}
+
+.accordion-header-v3:hover .accordion-icon-v3 {
+    transform: scale(1.1);
+}
+
+.accordion-item-v3.open .accordion-header-v3:hover .accordion-icon-v3 {
+    transform: rotate(180deg) scale(1.25);
 }
 
 .accordion-content-v3 {
@@ -93,7 +105,7 @@
 }
 
 .accordion-content-v3 p {
-    padding: 0 0 1.5rem 0;
+    padding: 0 0 1.5rem 2rem;
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
     line-height: 1.6;

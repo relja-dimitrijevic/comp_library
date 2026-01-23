@@ -1,6 +1,6 @@
 .image-layout-container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -10,13 +10,13 @@
 }
 
 .images {
-    height: 50%;
+    height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 1.5rem;
     width: 100%;
     max-width: 1200px;
+    align-items: center;
 }
 
 .image-wrapper {
@@ -26,6 +26,8 @@
     transition: all 0.3s ease; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     background-color: rgba(0, 0, 0, 0.2);
+    width: 20%;
+    height: 60%;
 }
 
 .image-wrapper:hover {

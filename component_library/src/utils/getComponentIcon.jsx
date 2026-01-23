@@ -32,7 +32,8 @@ export const getComponentIcon = (componentName) => {
     'Pricing': FaDollarSign,
     'Pagination': FaEllipsisH,
     'Progress': FaSpinner,
-    'Notification': FaBell
+    'Notification': FaBell,
+    'Background': FaImages
   };
 
   const Icon = iconMap[componentName] || FaIdCard;

@@ -52,7 +52,7 @@ function Home() {
                   <Icon size={48} />
                 </div>
                 <div className="featured-info">
-                  <h4>{comp.name}</h4>
+                  <h4>{comp.name} - {comp.variantName}</h4>
                   <span>Variant {comp.variant}</span>
                 </div>
               </Link>

@@ -1,5 +1,5 @@
 .button-icon {
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 1.5rem;
     background-color: transparent;
     color: white;
     border: 2px solid white;
@@ -15,8 +15,8 @@
 }
 
 .button-icon-symbol {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +24,7 @@
     border-radius: 50%;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    rotate: -90deg;
 }
 
 .button-icon:hover {
@@ -35,8 +36,8 @@
 .button-icon:hover .button-icon-symbol {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
-    color: white;
-    transform: rotate(90deg);
+    color: black;
+    transform: rotate(45deg);
 }
 
 @media (max-width: 768px) {

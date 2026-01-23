@@ -5,8 +5,9 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
-    
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .card-glass:hover {
@@ -16,13 +17,13 @@
     box-shadow: 0 12px 40px rgba(0, 245, 255, 0.3);
 }
 
-.card-image {
+.card-glass-image {
     width: 100%;
     aspect-ratio: 16/9;
     overflow: hidden;
 }
 
-.card-image img {
+.card-glass-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -30,42 +31,100 @@
     transition: all 0.3s ease;
 }
 
-.card-glass:hover .card-image img {
+.card-glass:hover .card-glass-image img {
     filter: grayscale(0);
     transform: scale(1.05);
 }
 
-.card-content {
+.card-glass-content {
     padding: 2rem;
     color: white;
 }
 
-.card-title {
+.card-glass-title {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0 0 1rem 0;
     color: white;
 }
 
-.card-description {
+.card-glass-description {
     font-size: 1rem;
     line-height: 1.7;
-    margin: 0;
+    margin: 0 0 1rem 0;
     color: rgba(255, 255, 255, 0.8);
 }
 
+.card-glass-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 255, 255, 0.05));
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.card-glass-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(0, 245, 255, 0.2);
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+}
+
+.card-glass-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-glass-rating svg {
+    color: #ffd700;
+}
+
+.card-glass-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-glass-author,
+.card-glass-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-glass-author svg,
+.card-glass-date svg {
+    opacity: 0.6;
+}
+
 @media (max-width: 768px) {
-    .card-content {
+    .card-glass-content {
         padding: 1.5rem;
     }
 
-    .card-title {
+    .card-glass-title {
         font-size: 1.25rem;
         margin-bottom: 0.75rem;
     }
 
-    .card-description {
+    .card-glass-description {
         font-size: 0.9rem;
     }
 }
-

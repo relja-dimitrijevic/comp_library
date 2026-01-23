@@ -1,54 +1,100 @@
 .button-3d {
     padding: 0.875rem 2rem;
-    background-color: white;
-    color: black;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    color: #1a1a1a;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     position: relative;
-    transition: all 0.2s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
     
     box-shadow: 
-        0 4px 0 rgba(0, 0, 0, 0.3),
-        0 6px 10px rgba(0, 0, 0, 0.2);
+        0 8px 0 rgba(0, 0, 0, 0.2),
+        0 12px 20px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .button-3d::before {
     content: '';
     position: absolute;
     top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.button-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
-    border-radius: 0.5rem;
-    opacity: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.3) 0%, 
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    border-radius: 0.75rem;
+    opacity: 1;
     transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.button-3d > * {
+    position: relative;
+    z-index: 2;
 }
 
 .button-3d:hover {
-    transform: translateY(2px);
+    transform: translateY(4px) rotateX(5deg) rotateY(-2deg);
+    background: linear-gradient(145deg, var(--accent-color), #00d4ff);
+    color: #000;
     box-shadow: 
-        0 2px 0 rgba(0, 0, 0, 0.3),
-        0 4px 8px rgba(0, 0, 0, 0.2);
+        0 4px 0 rgba(0, 0, 0, 0.2),
+        0 8px 16px rgba(0, 245, 255, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .button-3d:hover::before {
-    opacity: 1;
+    left: 100%;
+}
+
+.button-3d:hover::after {
+    opacity: 0.8;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.4) 0%, 
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
 }
 
 .button-3d:active {
-    transform: translateY(4px);
+    transform: translateY(8px) rotateX(8deg) rotateY(-3deg) scale(0.98);
     box-shadow: 
-        0 0 0 rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.2);
+        0 2px 0 rgba(0, 0, 0, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
 }
 
-.button-3d:hover {
-    background-color: var(--accent-color);
-    color: white;
+.button-3d:active::after {
+    opacity: 0.5;
 }
 
 @media (max-width: 768px) {

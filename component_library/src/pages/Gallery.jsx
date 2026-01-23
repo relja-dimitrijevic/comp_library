@@ -62,7 +62,7 @@ function Gallery() {
                 <Icon size={64} />
               </div>
               <div className="card-info">
-                <h3 className="card-name">{comp.name}</h3>
+                <h3 className="card-name">{comp.name} - {comp.variantName}</h3>
                 <span className="card-variant">Variant {comp.variant}</span>
                 <span className="card-category">{comp.category}</span>
               </div>

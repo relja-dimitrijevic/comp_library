@@ -1,6 +1,6 @@
 import './Button.css';
 
-function Button({ children, onClick, ...props }) {
+function Button({ children = 'Button', onClick, ...props }) {
     return (
         <button className='button-primary' onClick={onClick} {...props}>
             {children}

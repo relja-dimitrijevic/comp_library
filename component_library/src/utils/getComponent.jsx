@@ -74,6 +74,11 @@ import Notification_2 from '../components/Notification_2.jsx';
 import Notification_3 from '../components/Notification_3.jsx';
 import Notification_4 from '../components/Notification_4.jsx';
 import Notification_5 from '../components/Notification_5.jsx';
+import Background from '../components/Background.jsx';
+import Background_2 from '../components/Background_2.jsx';
+import Background_3 from '../components/Background_3.jsx';
+import Background_4 from '../components/Background_4.jsx';
+import Background_5 from '../components/Background_5.jsx';
 
 const componentMap = {
   Navbar: { 1: Navbar, 2: Navbar_2, 3: Navbar_3, 4: Navbar_4, 5: Navbar_5 },
@@ -90,7 +95,8 @@ const componentMap = {
   Pricing: { 1: Pricing, 2: Pricing_2, 3: Pricing_3, 4: Pricing_4, 5: Pricing_5 },
   Pagination: { 1: Pagination, 2: Pagination_2, 3: Pagination_3, 4: Pagination_4, 5: Pagination_5 },
   Progress: { 1: Progress, 2: Progress_2, 3: Progress_3, 4: Progress_4, 5: Progress_5 },
-  Notification: { 1: Notification, 2: Notification_2, 3: Notification_3, 4: Notification_4, 5: Notification_5 }
+  Notification: { 1: Notification, 2: Notification_2, 3: Notification_3, 4: Notification_4, 5: Notification_5 },
+  Background: { 1: Background, 2: Background_2, 3: Background_3, 4: Background_4, 5: Background_5 }
 };
 
 export const getComponent = (name, variant) => {
