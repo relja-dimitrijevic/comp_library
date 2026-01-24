@@ -1,0 +1,37 @@
+.animated-text-4-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.animated-text-4-svg {
+  width: min(90vw, 720px);
+  height: auto;
+  cursor: pointer;
+}
+
+.animated-text-4-text {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  fill: #ffffff;
+}
+
+.animated-text-4-text--pixelated {
+  fill: #ffffff;
+}
+
+.animated-text-4-mask-circle {
+  transition: r var(--animated-text-4-transition, 180ms) ease,
+    opacity var(--animated-text-4-transition, 180ms) ease;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .animated-text-4-svg {
+    width: min(92vw, 560px);
+  }
+}

@@ -8,16 +8,13 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(8px);
-    border: 2px solid white;
-    border-radius: 0.5rem;
-    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0 0.75rem;
+    background-color: transparent;
 }
 
 .data-table thead {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
 }
 
 .data-table th {
@@ -26,25 +23,39 @@
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    border-bottom: 2px solid white;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .data-table td {
     padding: 1rem 1.5rem;
     color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .data-table tbody tr {
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .data-table tbody tr:hover {
-    background-color: rgba(0, 245, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(112, 206, 198, 0.4);
 }
 
-.data-table tbody tr:last-child td {
-    border-bottom: none;
+.data-table tbody tr td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.data-table tbody tr td:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
 }
 
 @media (max-width: 768px) {
@@ -54,6 +65,7 @@
 
     .data-table {
         font-size: 0.9rem;
+        border-spacing: 0 0.5rem;
     }
 
     .data-table th,

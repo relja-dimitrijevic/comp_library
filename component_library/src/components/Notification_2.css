@@ -28,7 +28,7 @@
 }
 
 .notification-success-v2 {
-    border-color: var(--accent-color);
+    border-color: #22c55e;
 }
 
 .notification-error-v2 {
@@ -57,7 +57,7 @@
 }
 
 .notification-success-v2 .notification-icon-v2 {
-    color: var(--accent-color);
+    color: #22c55e;
 }
 
 .notification-error-v2 .notification-icon-v2 {

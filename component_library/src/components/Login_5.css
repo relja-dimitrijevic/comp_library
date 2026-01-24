@@ -60,7 +60,7 @@
 
 .input-v5 {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem !important;
     background-color: transparent;
     border: 1px solid white;
     color: white;

@@ -11,10 +11,10 @@
 .scroll-wrapper {
   display: flex;
   justify-content: space-evenly;
-  gap: 2REM;
+  gap: 2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   width: 100%;
   max-width: 100%;
 }
@@ -33,7 +33,7 @@
 .carousel-card:hover {
   transform: scale(1.05);
   border-color: var(--accent-color);
-  box-shadow: 0 8px 30px rgba(0, 245, 255, 0.4);
+  box-shadow: 0 8px 15px rgba(0, 245, 255, 0.4);
 }
 
 .carousel-card img {

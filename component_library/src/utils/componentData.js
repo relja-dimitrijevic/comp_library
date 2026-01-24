@@ -62,6 +62,11 @@ export const componentCategories = [
         name: 'Testimonials', 
         variants: [1, 2, 3, 4, 5],
         variantNames: ['Grid', 'Carousel', 'List', 'Masonry', 'Stack']
+      },
+      {
+        name: 'AnimatedText',
+        variants: [1, 2, 3, 4, 5],
+        variantNames: ['Blur to Focus', 'Gradient Flow', 'Typewriter', 'Frost', 'Glassy']
       }
     ]
   },

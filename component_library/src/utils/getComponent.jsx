@@ -79,6 +79,11 @@ import Background_2 from '../components/Background_2.jsx';
 import Background_3 from '../components/Background_3.jsx';
 import Background_4 from '../components/Background_4.jsx';
 import Background_5 from '../components/Background_5.jsx';
+import AnimatedText from '../components/AnimatedText.jsx';
+import AnimatedText_2 from '../components/AnimatedText_2.jsx';
+import AnimatedText_3 from '../components/AnimatedText_3.jsx';
+import AnimatedText_4 from '../components/AnimatedText_4.jsx';
+import AnimatedText_5 from '../components/AnimatedText_5.jsx';
 
 const componentMap = {
   Navbar: { 1: Navbar, 2: Navbar_2, 3: Navbar_3, 4: Navbar_4, 5: Navbar_5 },
@@ -96,7 +101,8 @@ const componentMap = {
   Pagination: { 1: Pagination, 2: Pagination_2, 3: Pagination_3, 4: Pagination_4, 5: Pagination_5 },
   Progress: { 1: Progress, 2: Progress_2, 3: Progress_3, 4: Progress_4, 5: Progress_5 },
   Notification: { 1: Notification, 2: Notification_2, 3: Notification_3, 4: Notification_4, 5: Notification_5 },
-  Background: { 1: Background, 2: Background_2, 3: Background_3, 4: Background_4, 5: Background_5 }
+  Background: { 1: Background, 2: Background_2, 3: Background_3, 4: Background_4, 5: Background_5 },
+  AnimatedText: { 1: AnimatedText, 2: AnimatedText_2, 3: AnimatedText_3, 4: AnimatedText_4, 5: AnimatedText_5 }
 };
 
 export const getComponent = (name, variant) => {

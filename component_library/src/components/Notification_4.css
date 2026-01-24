@@ -28,7 +28,7 @@
 }
 
 .toast-success-v4 {
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid #22c55e;
 }
 
 .toast-error-v4 {

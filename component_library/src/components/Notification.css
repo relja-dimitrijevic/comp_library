@@ -31,7 +31,7 @@
 }
 
 .notification-success {
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid #22c55e;
 }
 
 .notification-error {

@@ -5,7 +5,7 @@ function Login_2() {
         <div className='login-wrapper-v2'>
             <div className='login-split-v2'>
                 <div className='login-image-v2'>
-                    <img src='./images/image_1.jpg' alt='Background' />
+                    <img src='/images/image_1.jpg' alt='Background' />
                 </div>
                 <div className='login-form-v2'>
                     <h2 className='header-v2'>Login</h2>

@@ -1,10 +1,18 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { allComponents } from '../utils/componentData';
 import { getComponentIcon } from '../utils/getComponentIcon';
 import './Home.css';
 
 function Home() {
-  const featuredComponents = allComponents.slice(0, 6);
+  const featuredComponents = useMemo(() => {
+    const shuffled = [...allComponents];
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled.slice(0, 12);
+  }, []);
 
   return (
     <div className="home-page">

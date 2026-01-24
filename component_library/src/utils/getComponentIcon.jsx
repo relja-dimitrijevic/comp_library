@@ -13,7 +13,8 @@ import {
   FaDollarSign,     // Pricing
   FaEllipsisH,      // Pagination
   FaSpinner,        // Progress
-  FaBell            // Notification
+  FaBell,           // Notification
+  FaFont            // AnimatedText
 } from 'react-icons/fa';
 
 export const getComponentIcon = (componentName) => {
@@ -33,7 +34,8 @@ export const getComponentIcon = (componentName) => {
     'Pagination': FaEllipsisH,
     'Progress': FaSpinner,
     'Notification': FaBell,
-    'Background': FaImages
+    'Background': FaImages,
+    'AnimatedText': FaFont
   };
 
   const Icon = iconMap[componentName] || FaIdCard;

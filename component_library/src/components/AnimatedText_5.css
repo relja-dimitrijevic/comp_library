@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+.animated-text-5-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  background: url('../../public/images/image_1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: animated-text-5-float-bg 45s ease infinite;
+  overflow: visible;
+  filter: grayscale(100%);
+}
+
+@keyframes animated-text-5-float-bg {
+  0%,
+  100% {
+    background-position: center center;
+  }
+  25% {
+    background-position: 30% 70%;
+  }
+  50% {
+    background-position: 70% 30%;
+  }
+  75% {
+    background-position: 40% 60%;
+  }
+}
+
+.animated-text-5-wrapper {
+  position: relative;
+  width: 350px;
+  height: 90px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  background-clip: padding-box;
+  backdrop-filter: url(#animated-text-5-glass);
+  -webkit-backdrop-filter: url(#animated-text-5-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.animated-text-5-content {
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .animated-text-5-wrapper {
+    width: 280px;
+    height: 70px;
+  }
+  
+  .animated-text-5-content {
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+  }
+}

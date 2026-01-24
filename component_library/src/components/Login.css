@@ -7,10 +7,11 @@
     color: white;
     padding: 2rem 1rem;
     background-color: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
 .login-form {
-    width: 40%;
+    width: 100%;
     max-width: 450px;
     min-height: 500px;
     border: 2px solid white;
@@ -237,6 +238,6 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .login-form {
-        width: 50%;
+        max-width: 520px;
     }
 }

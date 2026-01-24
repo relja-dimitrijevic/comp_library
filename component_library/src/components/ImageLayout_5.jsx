@@ -2,10 +2,10 @@ import './ImageLayout_5.css'
 
 function ImageLayout_5() {
     const images = [
-        { src: './images/image_1.jpg', title: 'Image One' },
-        { src: './images/image_2.jpg', title: 'Image Two' },
-        { src: './images/image_3.jpg', title: 'Image Three' },
-        { src: './images/image_4.jpg', title: 'Image Four' }
+        { src: '/images/image_1.jpg', title: 'Image One' },
+        { src: '/images/image_2.jpg', title: 'Image Two' },
+        { src: '/images/image_3.jpg', title: 'Image Three' },
+        { src: '/images/image_4.jpg', title: 'Image Four' }
     ];
 
     return (
