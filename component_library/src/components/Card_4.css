@@ -88,7 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(135deg, var(--accent-shadow-subtle), rgba(255, 255, 255, 0.05));
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -97,7 +97,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.25rem 0.75rem;
-    background-color: rgba(0, 245, 255, 0.2);
+    background-color: var(--accent-shadow-medium);
     border-radius: 1rem;
     font-size: 0.75rem;
     font-weight: 500;

@@ -33,7 +33,7 @@
 .carousel-card:hover {
   transform: scale(1.05);
   border-color: var(--accent-color);
-  box-shadow: 0 8px 15px rgba(0, 245, 255, 0.4);
+  box-shadow: 0 8px 15px var(--accent-shadow-intense);
 }
 
 .carousel-card img {

@@ -38,7 +38,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 245, 255, 0.3), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(135deg, var(--accent-shadow-strong), rgba(0, 0, 0, 0.5));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,7 +172,7 @@
     background-color: var(--accent-color);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 245, 255, 0.4);
+    box-shadow: 0 4px 12px var(--accent-shadow-intense);
 }
 
 .login-section-v3 {

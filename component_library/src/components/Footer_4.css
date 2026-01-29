@@ -1,7 +1,7 @@
 .footer-v4 {
     width: 100%;
     padding: 3rem 2rem 1.5rem 2rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 245, 255, 0.1) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, var(--accent-shadow-subtle) 100%);
     backdrop-filter: blur(8px);
     
 }

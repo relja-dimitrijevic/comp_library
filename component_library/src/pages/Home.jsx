@@ -17,13 +17,13 @@ function Home() {
   return (
     <div className="home-page">
       <div className="hero-section">
-        <h1 className="hero-title">Component Library</h1>
+        <h1 className="hero-title">Reactive UI</h1>
         <p className="hero-subtitle">
-          A collection of {allComponents.length} beautifully designed, responsive React components
+          Production‑ready UI primitives with neon accents, built to drop into your next React app in seconds.
         </p>
         <div className="hero-actions">
-          <Link to="/gallery" className="cta-button primary">
-            Browse Components
+          <Link to="/library" className="cta-button primary">
+            Browse all components
           </Link>
         </div>
       </div>
@@ -31,16 +31,16 @@ function Home() {
       <div className="features-section">
         <div className="feature-grid">
           <div className="feature-card">
-            <h3>75+ Variants</h3>
-            <p>15 component types, each with 5 unique variants</p>
+            <h3>{allComponents.length} Components</h3>
+            <p>A growing set of carefully designed components built to be composed, customized, and reused across real projects.</p>
           </div>
           <div className="feature-card">
-            <h3>Fully Responsive</h3>
-            <p>All components adapt perfectly to any screen size</p>
+            <h3>Responsive by Design</h3>
+            <p>Every component is built to adapt naturally across mobile, tablet, and desktop without additional configuration.</p>
           </div>
           <div className="feature-card">
-            <h3>Modern Design</h3>
-            <p>Clean, minimal aesthetic with neon accents</p>
+            <h3>Refined Visual Language</h3>
+            <p>Minimal forms, soft motion, and subtle effects create a cohesive aesthetic without overpowering your content.</p>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ function Home() {
           })}
         </div>
         <div className="view-all">
-          <Link to="/gallery" className="cta-button secondary">
+          <Link to="/library" className="cta-button secondary">
             View All Components →
           </Link>
         </div>

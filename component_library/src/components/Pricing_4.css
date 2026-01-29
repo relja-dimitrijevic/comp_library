@@ -39,7 +39,7 @@
 
 .pricing-card-v4.featured {
     border: 2px solid var(--accent-color);
-    box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+    box-shadow: 0 0 30px var(--accent-shadow-strong);
 }
 
 .featured-badge-v4 {

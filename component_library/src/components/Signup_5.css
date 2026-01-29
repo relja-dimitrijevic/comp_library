@@ -48,7 +48,7 @@
 
 .input-card-v5.active {
     border-color: var(--accent-color);
-    box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+    box-shadow: 0 0 15px var(--accent-shadow-intense);
     transform: translateY(-2px);
 }
 

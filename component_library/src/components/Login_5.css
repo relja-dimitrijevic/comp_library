@@ -79,8 +79,8 @@
 .input-v5:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
-    background-color: rgba(0, 245, 255, 0.05);
+    box-shadow: 0 0 10px var(--accent-shadow-intense);
+    background-color: var(--accent-shadow-subtle);
 }
 
 .pass-options-v5 {
@@ -150,7 +150,7 @@
 .login-button-v5:hover {
     border-color: var(--accent-color);
     color: white;
-    box-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+    box-shadow: 0 0 20px var(--accent-shadow-intense);
 }
 
 .login-button-v5:hover .button-glow-v5 {

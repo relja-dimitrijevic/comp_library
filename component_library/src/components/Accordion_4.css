@@ -35,7 +35,7 @@
 
 .accordion-item-v4.open {
     border-color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+    box-shadow: 0 0 20px var(--accent-shadow-strong);
 }
 
 .accordion-header-v4 {
@@ -58,7 +58,7 @@
 }
 
 .accordion-item-v4.open .accordion-header-v4 {
-    background-color: rgba(0, 245, 255, 0.1);
+    background-color: var(--accent-shadow-subtle);
     color: var(--accent-color);
 }
 

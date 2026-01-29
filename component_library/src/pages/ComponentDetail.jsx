@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { getComponent } from '../utils/getComponent';
-import { componentCategories } from '../utils/componentData';
+import { componentCategories, getComponentPath } from '../utils/componentData';
 import './ComponentDetail.css';
 
 function ComponentDetail() {
@@ -69,6 +69,25 @@ function ComponentDetail() {
     }
   };
 
+  const getUsageCode = () => {
+    const variantSuffix = currentVariant === 1 ? '' : `_${currentVariant}`;
+    const importPath = `./components/${getComponentPath(name, currentVariant)}.jsx`;
+
+    return `import ${name}${variantSuffix} from '${importPath}';
+
+function App() {
+  return (
+    <${name}${variantSuffix} />
+  );
+}
+`;
+  };
+
+  const copyUsageCode = () => {
+    navigator.clipboard.writeText(getUsageCode());
+    alert('Usage snippet copied to clipboard!');
+  };
+
   const getJsxCode = () => {
     if (loadingCode) {
       return 'Loading code...';
@@ -101,7 +120,7 @@ function ComponentDetail() {
       <div className="component-detail">
         <div className="error-message">
           <h2>Component not found</h2>
-          <Link to="/gallery">Back to Gallery</Link>
+          <Link to="/library">Back to Library</Link>
         </div>
       </div>
     );
@@ -119,7 +138,7 @@ function ComponentDetail() {
             <span className="component-variant-badge">Variant {currentVariant}</span>
           </div>
         </div>
-        <Link to="/gallery" className="back-link">← Back to Gallery</Link>
+        <Link to="/library" className="back-link">← Back to Library</Link>
       </div>
 
       <div className="variant-switcher">
@@ -202,6 +221,24 @@ function ComponentDetail() {
             </div>
             <pre className="code-block">
               <code>{getCssCode()}</code>
+            </pre>
+          </div>
+
+          <div className="code-section">
+            <div className="code-header">
+              <span className="code-file-name">
+                Usage example
+              </span>
+              <button
+                className="copy-btn"
+                onClick={copyUsageCode}
+                disabled={loadingCode}
+              >
+                Copy Usage
+              </button>
+            </div>
+            <pre className="code-block">
+              <code>{getUsageCode()}</code>
             </pre>
           </div>
         </div>

@@ -20,7 +20,7 @@
 }
 
 .data-table-v5 thead {
-    background-color: rgba(0, 245, 255, 0.2);
+    background-color: var(--accent-shadow-medium);
 }
 
 .data-table-v5 th {
@@ -43,7 +43,7 @@
 }
 
 .data-table-v5 tbody tr:hover {
-    background-color: rgba(0, 245, 255, 0.15);
+    background-color: var(--accent-shadow-subtle);
 }
 
 .data-table-v5 tbody tr:last-child td {

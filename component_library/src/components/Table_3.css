@@ -40,7 +40,7 @@
 }
 
 .bordered-table-v3 tbody tr:hover {
-    background-color: rgba(0, 245, 255, 0.1);
+    background-color: var(--accent-shadow-subtle);
 }
 
 @media (max-width: 768px) {

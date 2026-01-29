@@ -103,12 +103,15 @@ function Sidebar({ isOpen, onClose }) {
     setExpandedCategory(prev => prev === categoryName ? null : categoryName);
   };
 
-  const filteredCategories = componentCategories.map(category => ({
-    ...category,
-    components: category.components.filter(comp =>
-      comp.name.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.components.length > 0);
+  const filteredCategories = componentCategories
+    .filter(category => category.name !== 'Backgrounds')
+    .map(category => ({
+      ...category,
+      components: category.components.filter(comp =>
+        comp.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    }))
+    .filter(category => category.components.length > 0);
 
   const isActive = (name, variant) => {
     const path = `/components/${name}/${variant}`;
@@ -119,7 +122,7 @@ function Sidebar({ isOpen, onClose }) {
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => {
-        fetch('http://127.0.0.1:7242/ingest/6e8b7e88-67c1-4cd3-8431-714bebb646e7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Sidebar.jsx:38',message:'Current route info',data:{currentPath:location.pathname,isHomePage:location.pathname === '/',isGallery:location.pathname === '/gallery',isComponentDetail:location.pathname.startsWith('/components/')},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'F'})}).catch(()=>{});
+        fetch('http://127.0.0.1:7242/ingest/6e8b7e88-67c1-4cd3-8431-714bebb646e7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Sidebar.jsx:38',message:'Current route info',data:{currentPath:location.pathname,isHomePage:location.pathname === '/',isLibrary:location.pathname === '/library',isComponentDetail:location.pathname.startsWith('/components/')},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'F'})}).catch(()=>{});
       }, 50);
     }
   }, [isOpen, location.pathname]);
@@ -130,7 +133,7 @@ function Sidebar({ isOpen, onClose }) {
       {isOpen && <div className="sidebar-overlay" onClick={onClose}></div>}
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <h1 className="sidebar-logo">Component Library</h1>
+          <h1 className="sidebar-logo"></h1>
         </div>
 
         <div className="sidebar-search">
@@ -156,15 +159,15 @@ function Sidebar({ isOpen, onClose }) {
             Home
           </Link>
           <Link
-            to="/gallery"
-            className="nav-link gallery-link"
+            to="/library"
+            className="nav-link library-link"
             onClick={() => {
               if (window.innerWidth <= 768) {
                 onClose();
               }
             }}
           >
-            Gallery
+            Library
           </Link>
 
           <div className="categories">

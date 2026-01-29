@@ -45,7 +45,7 @@
 }
 
 .striped-table-v2 tbody tr:hover {
-    background-color: rgba(0, 245, 255, 0.2) !important;
+    background-color: var(--accent-shadow-medium) !important;
 }
 
 @media (max-width: 768px) {

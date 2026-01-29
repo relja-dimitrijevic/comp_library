@@ -33,7 +33,7 @@
 .image-wrapper:hover {
     border-color: var(--accent-color);
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.4);
+    box-shadow: 0 8px 25px var(--accent-shadow-intense);
     z-index: 1;
 }
 

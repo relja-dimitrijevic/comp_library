@@ -1,6 +1,6 @@
 .button-gradient {
     padding: 0.875rem 2rem;
-    background: linear-gradient(135deg, var(--accent-color, var(--accent-color)) 0%, rgb(162, 252, 255) 100%);
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-secondary-shadow-intense)r);
     color: black;
     border: none;
     border-radius: 0.5rem;
@@ -11,7 +11,7 @@
     position: relative;
     overflow: hidden;
     
-    box-shadow: 0 4px 15px rgba(0, 245, 255, 0.3);
+    box-shadow: 0 4px 15px var(--accent-shadow-strong);
 }
 
 .button-gradient::before {
@@ -31,7 +31,7 @@
 
 .button-gradient:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 245, 255, 0.5);
+    box-shadow: 0 6px 20px var(--accent-shadow-intense);
 }
 
 .button-gradient:active {

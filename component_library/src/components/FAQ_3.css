@@ -29,7 +29,7 @@
 }
 
 .variant-morph .faq-item.open .accordion {
-    background: rgba(0, 245, 255, 0.15);
+    background: var(--accent-shadow-subtle);
     border-color: var(--accent-color);
     transform: scale(1.01);
 }

@@ -53,7 +53,7 @@
 }
 
 .accordion-item.open .accordion-header {
-    background-color: rgba(0, 245, 255, 0.1);
+    background-color: var(--accent-shadow-subtle);
 }
 
 .accordion-icon {

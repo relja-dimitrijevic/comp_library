@@ -1,4 +1,4 @@
-.gallery-page {
+.library-page {
   padding: 2rem;
   min-height: 100vh;
   font-size: 1rem;
@@ -8,11 +8,11 @@
   width: 100%;
 }
 
-.gallery-header {
+.library-header {
   margin-bottom: 2rem;
 }
 
-.gallery-title {
+.library-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -20,13 +20,13 @@
   letter-spacing: 0.02em;
 }
 
-.gallery-subtitle {
+.library-subtitle {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1rem;
   margin: 0;
 }
 
-.gallery-controls {
+.library-controls {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
@@ -38,7 +38,7 @@
   min-width: 250px;
 }
 
-.gallery-search {
+.library-search {
   width: 100%;
   padding: 0.875rem 1rem;
   background-color: var(--bg-surface);
@@ -49,18 +49,22 @@
   transition: all 0.3s ease;
 }
 
-.gallery-search::placeholder {
+.library-search::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
 
-.gallery-search:focus {
+.library-search:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 15px var(--accent-shadow-strong);
 }
 
 .filter-container {
   min-width: 200px;
+}
+
+.filter-container select {
+  appearance: none;
 }
 
 .category-filter {
@@ -73,15 +77,16 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .category-filter:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 15px var(--accent-shadow-strong);
 }
 
-.gallery-grid {
+.library-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
@@ -102,7 +107,7 @@
 
 .component-card:hover {
   border-color: var(--accent-color);
-  box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 20px var(--accent-shadow-strong);
   transform: translateY(-4px);
 }
 
@@ -121,10 +126,10 @@
 }
 
 .component-card:hover .card-preview {
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--accent-shadow-subtle);
   color: var(--accent-color);
   transform: scale(1.05);
-  border-color: rgba(0, 245, 255, 0.2);
+  border-color: var(--accent-shadow-medium);
 }
 
 .card-info {
@@ -160,12 +165,12 @@
 }
 
 @media (max-width: 768px) {
-  .gallery-grid {
+  .library-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
   }
 
-  .gallery-title {
+  .library-title {
     font-size: 2rem;
   }
 }

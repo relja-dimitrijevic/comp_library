@@ -94,7 +94,7 @@ function AnimatedText_4({
 
           {/* Mask blur softens the edge of the pixelated zone */}
           <filter id="animated-text-4-mask-blur">
-            <feGaussianBlur stdDeviation="3" />
+            <feGaussianBlur stdDeviation="3`" />
           </filter>
 
           {/* Mask: black hides effect, white reveals it */}

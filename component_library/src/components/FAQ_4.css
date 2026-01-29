@@ -56,7 +56,7 @@
 
 .faq-tab-v4.active {
   color: var(--accent-color, var(--accent-color));
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--accent-shadow-subtle);
 }
 
 .faq-tab-v4.active::after {

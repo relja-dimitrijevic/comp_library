@@ -31,7 +31,7 @@
 
 .testimonial-box-v4:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 5px 20px rgba(0, 245, 255, 0.2);
+    box-shadow: 0 5px 20px var(--accent-shadow-medium);
 }
 
 .testimonial-header-v4 {

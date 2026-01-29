@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Sidebar from './components/showcase/Sidebar';
 import MobileMenu from './components/showcase/MobileMenu';
 import Home from './pages/Home';
-import Gallery from './pages/Gallery';
+import Library from './pages/Library';
 import ComponentDetail from './pages/ComponentDetail';
 import './App.css';
 
@@ -23,7 +23,7 @@ function AppContent() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/library" element={<Library />} />
           <Route path="/components/:name/:variant" element={<ComponentDetail />} />
         </Routes>
       </main>

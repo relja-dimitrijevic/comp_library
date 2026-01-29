@@ -52,7 +52,7 @@
 .step-v4.active-v4 .step-number-v4 {
     border-color: var(--accent-color);
     color: var(--accent-color);
-    background-color: rgba(0, 245, 255, 0.1);
+    background-color: var(--accent-shadow-subtle);
 }
 
 .step-label-v4 {

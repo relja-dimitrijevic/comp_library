@@ -70,6 +70,18 @@ a {
   --bg-surface: #1a1a1a;
   --text-primary: #f5f5f5;
   background-color: var(--bg-primary);
+  
+  /* Accent color variations for shadows, glows, and backgrounds */
+  --accent-shadow-subtle: rgba(0, 245, 255, 0.1);    /* For backgrounds */
+  --accent-shadow-medium: rgba(0, 245, 255, 0.2);   /* For borders, light backgrounds */
+  --accent-shadow-strong: rgba(0, 245, 255, 0.3);   /* For shadows (most common) */
+  --accent-shadow-intense: rgba(0, 245, 255, 0.5);  /* For strong shadows, borders, gradients */
+  
+  /* Secondary accent color variations */
+  --accent-secondary-shadow-subtle: rgba(255, 0, 255, 0.1);
+  --accent-secondary-shadow-medium: rgba(255, 0, 255, 0.2);
+  --accent-secondary-shadow-strong: rgba(255, 0, 255, 0.3);
+  --accent-secondary-shadow-intense: rgba(255, 0, 255, 0.5);
 }
 
 body {

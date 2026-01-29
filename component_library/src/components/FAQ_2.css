@@ -48,7 +48,7 @@
 }
 
 .faq-tab.active {
-  background: rgba(0, 245, 255, 0.2);
+  background: var(--accent-shadow-medium);
   padding-left: 1.5rem;
   border-left: 3px solid var(--accent-color);
   color: var(--accent-color);

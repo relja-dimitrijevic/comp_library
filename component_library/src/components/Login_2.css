@@ -136,7 +136,7 @@
     background-color: var(--accent-color);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 245, 255, 0.4);
+    box-shadow: 0 4px 12px var(--accent-shadow-intense);
 }
 
 .signup-section-v2 {

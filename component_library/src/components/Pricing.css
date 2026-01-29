@@ -35,7 +35,7 @@
 .pricing-card:hover {
     border-color: var(--accent-color);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+    box-shadow: 0 10px 30px var(--accent-shadow-strong);
 }
 
 .pricing-card.popular {

@@ -32,7 +32,7 @@
 .masonry-item:hover {
   transform: translateY(-5px);
   border-color: var(--accent-color);
-  box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 8px 25px var(--accent-shadow-strong);
 }
 
 .masonry-item img {

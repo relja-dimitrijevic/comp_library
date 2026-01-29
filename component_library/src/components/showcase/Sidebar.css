@@ -50,7 +50,7 @@
 .search-input:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 10px var(--accent-shadow-strong);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -72,7 +72,7 @@
 }
 
 .nav-link:hover {
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--accent-shadow-subtle);
   border-left-color: var(--accent-color);
   color: var(--accent-color);
 }
@@ -102,7 +102,7 @@
 }
 
 .category-header:hover {
-  background-color: rgba(0, 245, 255, 0.05);
+  background-color: var(--accent-shadow-subtle);
   color: var(--accent-color);
 }
 
@@ -150,24 +150,24 @@
 }
 
 .variant-link:hover {
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--accent-shadow-subtle);
   color: var(--accent-color);
   border-left-color: var(--accent-color);
 }
 
 .variant-link.active {
-  background-color: rgba(0, 245, 255, 0.15);
+  background-color: var(--accent-shadow-subtle);
   color: var(--accent-color);
   border-left-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+  box-shadow: 0 0 10px var(--accent-shadow-medium);
 }
 
 .home-link {
-  background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 255, 0.1));
+  background: linear-gradient(135deg, var(--accent-shadow-subtle), var(--accent-secondary-shadow-subtle));
 }
 
-.gallery-link {
-  background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 245, 255, 0.1));
+.library-link {
+  background: linear-gradient(135deg, var(--accent-secondary-shadow-subtle), var(--accent-shadow-subtle));
 }
 
 .sidebar-overlay {
@@ -213,7 +213,7 @@
 /* Custom Scrollbar */
 .sidebar-nav {
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 245, 255, 0.3) rgba(0, 0, 0, 0.2);
+  scrollbar-color: var(--accent-shadow-strong) rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-nav::-webkit-scrollbar {
@@ -226,11 +226,11 @@
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(0, 245, 255, 0.3), rgba(255, 0, 255, 0.3));
+  background: linear-gradient(180deg, var(--accent-shadow-strong), var(--accent-secondary-shadow-intense));
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgba(0, 245, 255, 0.5), rgba(255, 0, 255, 0.5));
+  background: linear-gradient(180deg, var(--accent-shadow-intense), var(--accent-secondary-shadow-intense));
 }

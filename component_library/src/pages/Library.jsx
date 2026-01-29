@@ -2,16 +2,18 @@ import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { allComponents } from '../utils/componentData';
 import { getComponentIcon } from '../utils/getComponentIcon';
-import './Gallery.css';
+import './Library.css';
 
-function Gallery() {
+function Library() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', ...new Set(allComponents.map(c => c.category))];
+  const visibleComponents = allComponents.filter(c => c.category !== 'Backgrounds');
+
+  const categories = ['All', ...new Set(visibleComponents.map(c => c.category))];
 
   const filteredComponents = useMemo(() => {
-    return allComponents.filter(comp => {
+    return visibleComponents.filter(comp => {
       const matchesSearch = comp.name.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || comp.category === selectedCategory;
       return matchesSearch && matchesCategory;
@@ -19,20 +21,20 @@ function Gallery() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <div className="gallery-page">
-      <div className="gallery-header">
-        <h1 className="gallery-title">Component Gallery</h1>
-        <p className="gallery-subtitle">Browse all {allComponents.length} component variants</p>
+    <div className="library-page">
+      <div className="library-header">
+        <h1 className="library-title">Component Library</h1>
+        <p className="library-subtitle">Browse all {allComponents.length} component variants</p>
       </div>
 
-      <div className="gallery-controls">
+      <div className="library-controls">
         <div className="search-container">
           <input
             type="text"
             placeholder="Search components..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="gallery-search"
+            className="library-search"
           />
         </div>
 
@@ -49,7 +51,7 @@ function Gallery() {
         </div>
       </div>
 
-      <div className="gallery-grid">
+      <div className="library-grid">
         {filteredComponents.map((comp) => {
           const Icon = getComponentIcon(comp.name);
           return (
@@ -80,5 +82,5 @@ function Gallery() {
   );
 }
 
-export default Gallery;
+export default Library;
 

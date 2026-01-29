@@ -94,7 +94,7 @@
 }
 
 .dropdown-item-v5:hover {
-    background-color: rgba(0, 245, 255, 0.2);
+    background-color: var(--accent-shadow-medium);
     color: var(--accent-color);
     padding-left: 2rem;
 }

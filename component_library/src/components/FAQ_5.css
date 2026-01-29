@@ -39,12 +39,12 @@
 
 .faq-card-v5:hover {
   border-color: var(--accent-color, var(--accent-color));
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--accent-shadow-subtle);
 }
 
 .faq-card-v5.open {
   border-color: var(--accent-color, var(--accent-color));
-  background-color: rgba(0, 245, 255, 0.15);
+  background-color: var(--accent-shadow-subtle);
 }
 
 .faq-question-v5 {

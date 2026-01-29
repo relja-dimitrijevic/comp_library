@@ -35,7 +35,7 @@
 }
 
 .pricing-row-v5:hover {
-    background-color: rgba(0, 245, 255, 0.1);
+    background-color: var(--accent-shadow-subtle);
 }
 
 .plan-info-v5,

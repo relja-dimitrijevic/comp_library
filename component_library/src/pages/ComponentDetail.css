@@ -67,9 +67,9 @@
 }
 
 .back-link:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 10px var(--accent-secondary-shadow-strong);
 }
 
 .variant-switcher {
@@ -111,14 +111,14 @@
 
 .variant-tab:hover {
   border-color: var(--accent-color);
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--accent-shadow-subtle);
 }
 
 .variant-tab.active {
   background-color: var(--accent-color);
   color: #000;
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 15px var(--accent-shadow-intense);
 }
 
 .preview-section {
@@ -126,7 +126,7 @@
 }
 
 .preview-container {
-  background-color: var(--bg-surface);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, var(--accent-shadow-subtle) 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -256,6 +256,15 @@
   width: 100%;
 }
 
+/* Override accent colors to use pink/secondary colors in preview container */
+.preview-container {
+  --accent-color: var(--accent-secondary);
+  --accent-shadow-subtle: var(--accent-secondary-shadow-subtle);
+  --accent-shadow-medium: var(--accent-secondary-shadow-medium);
+  --accent-shadow-strong: var(--accent-secondary-shadow-strong);
+  --accent-shadow-intense: var(--accent-secondary-shadow-intense);
+}
+
 .detail-actions {
   display: flex;
   justify-content: center;
@@ -280,7 +289,7 @@
   background-color: var(--accent-color);
   color: #000;
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 15px var(--accent-shadow-intense);
 }
 
 .action-btn:disabled {
@@ -331,7 +340,7 @@
 }
 
 .copy-btn:hover:not(:disabled) {
-  box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+  box-shadow: 0 0 10px var(--accent-shadow-intense);
 }
 
 .copy-btn:disabled {
@@ -347,7 +356,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   max-height: 600px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 245, 255, 0.3) rgba(0, 0, 0, 0.2);
+  scrollbar-color: var(--accent-shadow-strong) rgba(0, 0, 0, 0.2);
 }
 
 .code-block::-webkit-scrollbar {
@@ -361,13 +370,13 @@
 }
 
 .code-block::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(0, 245, 255, 0.3), rgba(255, 0, 255, 0.3));
+  background: linear-gradient(180deg, var(--accent-shadow-strong), var(--accent-secondary-shadow-intense));
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 .code-block::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgba(0, 245, 255, 0.5), rgba(255, 0, 255, 0.5));
+  background: linear-gradient(180deg, var(--accent-shadow-intense), var(--accent-secondary-shadow-intense));
 }
 
 .code-block code {
