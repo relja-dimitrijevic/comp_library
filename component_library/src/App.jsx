@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Sidebar from './components/showcase/Sidebar';
 import MobileMenu from './components/showcase/MobileMenu';
-import Home from './pages/Home';
-import Library from './pages/Library';
-import ComponentDetail from './pages/ComponentDetail';
 import './App.css';
+
+// Route-based code splitting
+const Home = lazy(() => import('./pages/Home'));
+const Library = lazy(() => import('./pages/Library'));
+const ComponentDetail = lazy(() => import('./pages/ComponentDetail'));
 
 function AppContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -21,11 +23,14 @@ function AppContent() {
       <MobileMenu onToggle={() => setSidebarOpen(!sidebarOpen)} isOpen={sidebarOpen} />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/components/:name/:variant" element={<ComponentDetail />} />
-        </Routes>
+        <Suspense fallback={<div style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-primary)' }}>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Navigate to="/library" replace />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/components/:name/:variant" element={<ComponentDetail />} />
+          </Routes>
+        </Suspense>
       </main>
     </div>
   );

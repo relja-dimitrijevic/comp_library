@@ -33,7 +33,7 @@ function Testimonials() {
                         </div>
                         <div className='testimonial-author'>
                             <div className='author-avatar'>
-                                <img src={testimonial.image} alt={testimonial.name} />
+                                <img src={testimonial.image} alt={testimonial.name} loading="lazy" decoding="async" />
                             </div>
                             <div className='author-info'>
                                 <h4 className='author-name'>{testimonial.name}</h4>

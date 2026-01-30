@@ -14,7 +14,7 @@ function Card_3({
         <div className='card-glass'>
             <div className='card-glass-image'>
                 {image ? (
-                    <img src={image} alt={title} />
+                    <img src={image} alt={title} loading="lazy" decoding="async" />
                 ) : (
                     <div className='card-glass-image-placeholder'>
                         <FaImage size={48} />

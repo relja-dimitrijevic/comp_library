@@ -20,7 +20,7 @@ function Card_2({
             <div className='card-flip-front'>
                 <div className='card-flip-image'>
                     {image ? (
-                        <img src={image} alt={title} />
+                        <img src={image} alt={title} loading="lazy" decoding="async" />
                     ) : (
                         <div className='card-flip-image-placeholder'>
                             <FaImage size={48} />

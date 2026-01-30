@@ -7,8 +7,8 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  background: var(--bg-gradient);
 }
-
 .hero-section {
   text-align: center;
   padding: 0;
@@ -16,7 +16,7 @@
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: clamp(3.5rem, 10vw, 5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 0.5rem 0;
@@ -30,31 +30,29 @@
   text-rendering: optimizeLegibility;
 }
 
+/* 
 .hero-title:hover {
-  animation: headerGlow 4s ease-in-out;
+  animation: headerGlow 2s ease-in-out;
 }
-
+  
 @keyframes headerGlow {
   0%, 100% {
-    /* center */
     text-shadow: 0 0 5px transparent;
   }
 
   25% {
-    /* bottom-left corner */
     text-shadow: -6px 6px 10px var(--accent-shadow-strong);
   }
 
   50% {
-    /* center */
     text-shadow: 0 0 5px var(--accent-secondary-shadow-strong);
   }
 
   75% {
-    /* top-right corner */
     text-shadow: 6px -6px 10px var(--accent-secondary-shadow-strong);
   }
-}
+} 
+*/
 
 .hero-subtitle {
   font-size: 1rem;
@@ -149,7 +147,7 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 2rem 0;
@@ -216,19 +214,20 @@
   text-align: center;
 }
 
+/* Standardized breakpoints:
+ * Mobile: < 480px
+ * Small: 480px - 767px
+ * Medium: 768px - 1023px
+ * Large: 1024px - 1199px
+ * XL: 1200px+
+ */
+
 @media (max-width: 768px) {
   .home-page {
     padding: 1rem;
   }
 
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
+  /* Font sizes now handled by clamp() - no need to override */
   .featured-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

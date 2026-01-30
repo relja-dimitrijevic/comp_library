@@ -14,7 +14,7 @@ function ImageLayout_3() {
       <div className="scroll-wrapper">
         {images.map((src, index) => (
           <div key={index} className="carousel-card">
-            <img src={src} alt="Not found" />
+            <img src={src} alt="Not found" loading="lazy" decoding="async" />
           </div>
         ))}
       </div>

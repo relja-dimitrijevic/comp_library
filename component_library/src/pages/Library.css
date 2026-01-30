@@ -6,6 +6,7 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  background: var(--bg-gradient);
 }
 
 .library-header {
@@ -13,7 +14,7 @@
 }
 
 .library-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 0.5rem 0;
@@ -64,6 +65,7 @@
 }
 
 .filter-container select {
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -170,8 +172,6 @@
     gap: 1rem;
   }
 
-  .library-title {
-    font-size: 2rem;
-  }
+  /* Font sizes now handled by clamp() - no need to override */
 }
 

@@ -2,6 +2,7 @@
     width: 100%;
     padding: 3rem 2rem 1.5rem 2rem;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, var(--accent-shadow-subtle) 100%);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     
 }

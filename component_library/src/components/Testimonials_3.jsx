@@ -31,7 +31,7 @@ function Testimonials_3() {
                         <div className='testimonial-quote-v3'>"</div>
                         <p className='testimonial-text-v3'>{testimonial.content}</p>
                         <div className='testimonial-author-v3'>
-                            <img src={testimonial.image} alt={testimonial.name} className='author-image-v3' />
+                            <img src={testimonial.image} alt={testimonial.name} className='author-image-v3' loading="lazy" decoding="async" />
                             <div className='author-details-v3'>
                                 <h4 className='author-name-v3'>{testimonial.name}</h4>
                                 <p className='author-role-v3'>{testimonial.role}</p>

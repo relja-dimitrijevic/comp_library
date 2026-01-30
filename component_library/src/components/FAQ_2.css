@@ -16,6 +16,7 @@
   min-height: 500px;
   border: 2px solid white;
   border-radius: 0.5rem;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: rgba(0, 0, 0, 0.3);
   overflow: hidden;

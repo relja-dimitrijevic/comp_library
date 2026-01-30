@@ -13,7 +13,7 @@ function Card({
         <div className='card'>
             <div className='card-image'>
                 {image ? (
-                    <img src={image} alt={title} />
+                    <img src={image} alt={title} loading="lazy" decoding="async" />
                 ) : (
                     <div className='card-image-placeholder'>
                         <FaImage size={48} />

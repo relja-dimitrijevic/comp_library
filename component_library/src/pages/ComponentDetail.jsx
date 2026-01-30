@@ -44,7 +44,7 @@ function ComponentDetail() {
     setLoadingCode(true);
     const variantSuffix = currentVariant === 1 ? '' : `_${currentVariant}`;
     const componentName = `${name}${variantSuffix}`;
-    
+
     try {
       // Use dynamic imports with ?raw to load files as text
       // Vite supports ?raw suffix for importing files as raw text
@@ -197,6 +197,7 @@ function App() {
                 className="copy-btn"
                 onClick={copyJsxCode}
                 disabled={loadingCode || !jsxCode}
+                aria-label="Copy JSX code to clipboard"
               >
                 Copy JSX
               </button>
@@ -215,6 +216,7 @@ function App() {
                 className="copy-btn"
                 onClick={copyCssCode}
                 disabled={loadingCode || !cssCode}
+                aria-label="Copy CSS code to clipboard"
               >
                 Copy CSS
               </button>
@@ -224,23 +226,6 @@ function App() {
             </pre>
           </div>
 
-          <div className="code-section">
-            <div className="code-header">
-              <span className="code-file-name">
-                Usage example
-              </span>
-              <button
-                className="copy-btn"
-                onClick={copyUsageCode}
-                disabled={loadingCode}
-              >
-                Copy Usage
-              </button>
-            </div>
-            <pre className="code-block">
-              <code>{getUsageCode()}</code>
-            </pre>
-          </div>
         </div>
       )}
     </div>

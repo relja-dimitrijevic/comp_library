@@ -15,7 +15,7 @@ function ImageLayout_2() {
       <div className="masonry-grid">
         {images.map((item, index) => (
           <div key={index} className="masonry-item">
-            <img src={item.src} alt={item.caption} />
+            <img src={item.src} alt={item.caption} loading="lazy" decoding="async" />
             <div className="overlay">
               <p>{item.caption}</p>
             </div>

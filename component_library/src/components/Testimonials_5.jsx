@@ -29,7 +29,7 @@ function Testimonials_5() {
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className='testimonial-stack-item-v5'>
                         <div className='stack-image-v5'>
-                            <img src={testimonial.image} alt={testimonial.name} />
+                            <img src={testimonial.image} alt={testimonial.name} loading="lazy" decoding="async" />
                         </div>
                         <div className='stack-content-v5'>
                             <p className='stack-text-v5'>"{testimonial.content}"</p>

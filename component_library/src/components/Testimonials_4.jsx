@@ -30,7 +30,7 @@ function Testimonials_4() {
                     <div key={index} className='testimonial-box-v4'>
                         <div className='testimonial-header-v4'>
                             <div className='author-avatar-v4'>
-                                <img src={testimonial.image} alt={testimonial.name} />
+                                <img src={testimonial.image} alt={testimonial.name} loading="lazy" decoding="async" />
                             </div>
                             <div className='author-info-v4'>
                                 <h4 className='author-name-v4'>{testimonial.name}</h4>

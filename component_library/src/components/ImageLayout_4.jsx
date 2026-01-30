@@ -13,7 +13,7 @@ function ImageLayout_4() {
             <div className='images-grid-v4'> 
                 {images.map((src, index) => (
                     <div key={index} className='image-wrapper-v4'>
-                        <img src={src} alt={`Image ${index + 1}`} />
+                        <img src={src} alt={`Image ${index + 1}`} loading="lazy" decoding="async" />
                         <div className='image-overlay-v4'>
                             <span className='overlay-text-v4'>Image {index + 1}</span>
                         </div>

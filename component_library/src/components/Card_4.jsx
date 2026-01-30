@@ -15,7 +15,7 @@ function Card_4({
             <div className='card-minimal-border-accent'></div>
             <div className='card-minimal-image'>
                 {image ? (
-                    <img src={image} alt={title} />
+                    <img src={image} alt={title} loading="lazy" decoding="async" />
                 ) : (
                     <div className='card-minimal-image-placeholder'>
                         <FaImage size={48} />

@@ -18,7 +18,7 @@ function ImageLayout_5() {
                         style={{ '--delay': `${index * 0.1}s` }}
                     >
                         <div className='image-frame-v5'>
-                            <img src={item.src} alt={item.title} />
+                            <img src={item.src} alt={item.title} loading="lazy" decoding="async" />
                         </div>
                         <div className='image-label-v5'>{item.title}</div>
                     </div>
