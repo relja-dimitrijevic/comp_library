@@ -1,6 +1,6 @@
-
 ## License
 
 Code is licensed under MIT.
 
-Branding (name, logo) is not included in the license.
+Branding (name, logo, design) is not included in the license.
+See TRADEMARK.md for details.
